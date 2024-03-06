@@ -19,7 +19,6 @@ class My_WooCommerce_VAT_Field_Plugin {
         add_filter( 'woocommerce_order_get_formatted_shipping_address', array( $this, 'order_details_shipping_add_vat_field' ), 10, 3 );
         add_filter( 'woocommerce_admin_billing_fields', array( $this, 'order_edit_shipping_info_form_add_vat_field' ), 10, 1 );
         add_action( 'woocommerce_admin_order_data_after_order_details', array( $this, "add_edit_order_css" ) );
-        add_action( 'admin_menu', array( $this, 'add_reusable_blocks_admin_menu' ) );
         
         add_action( 'woocommerce_save_account_details', array( $this, 'save_billing_vat_number' ) );
         add_action( 'woocommerce_edit_account_form', array( $this, 'display_billing_vat_number_field' ) ); 
